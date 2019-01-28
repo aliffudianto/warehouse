@@ -74,11 +74,11 @@ public class Recycler extends AppCompatActivity {
 
                                 //adding the product to product list
                                 productList.add(new Data(
-                                        Data.getInt("idgud"),
-                                        Data.getString("deskripsi"),
-                                        Data.getDouble("maxantrian"),
-                                        Data.getDouble("antrian"),
-                                        Data.getDouble("tibadigudang")
+                                        Data.optInt("id"),
+                                        Data.optString("deskripsi"),
+                                        Data.optDouble("maxantrian"),
+                                        Data.optDouble("antrian"),
+                                        Data.optDouble("tibadigudang")
                                 ));
                             }
 
