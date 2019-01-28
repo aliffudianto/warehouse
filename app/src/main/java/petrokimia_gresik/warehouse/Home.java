@@ -19,6 +19,7 @@ public class Home extends Activity {
     private TextView txtName;
     private TextView txtEmail;
     private Button btnLogout;
+    private ImageView btnList;
     private ImageView btnMaps;
     private SQLiteHandler db;
     private SessionManager session;
@@ -32,6 +33,14 @@ public class Home extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Home.this, MapsActivity.class);
+                startActivity(i);
+            }
+        });
+        btnList = (ImageView) findViewById(R.id.cdlist);
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, Recycler.class);
                 startActivity(i);
             }
         });
